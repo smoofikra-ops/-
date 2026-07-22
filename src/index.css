@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #fbf8f0;
+  --color-primary-100: #f5eedc;
+  --color-primary-200: #ead9b6;
+  --color-primary-300: #dec187;
+  --color-primary-400: #d4a559;
+  --color-primary-500: #ca8c35;
+  --color-primary-600: #b16e2b;
+  --color-primary-700: #935326;
+  --color-primary-800: #784323;
+  --color-primary-900: #623720;
+  --color-primary-950: #381c0f;
+
+  --color-graphite-50: #f7f7f7;
+  --color-graphite-100: #ececec;
+  --color-graphite-200: #d6d6d6;
+  --color-graphite-300: #b5b5b5;
+  --color-graphite-400: #8f8f8f;
+  --color-graphite-500: #737373;
+  --color-graphite-600: #5c5c5c;
+  --color-graphite-700: #4a4a4a;
+  --color-graphite-800: #3f3f3f;
+  --color-graphite-900: #333333;
+  --color-graphite-950: #141414;
+
+  --font-sans: 'Outfit', 'Tajawal', system-ui, sans-serif;
+  --font-arabic: 'Tajawal', 'Outfit', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans bg-white text-graphite-900 antialiased leading-relaxed;
+  }
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    @apply font-arabic;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
